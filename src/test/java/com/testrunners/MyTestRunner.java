@@ -8,14 +8,13 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/com/features/AccountsPage.feature",
+@CucumberOptions(features="src/test/resources/com/features/OrderABagItem.feature",
 				
 				glue={"com.stepDefinitions", "com.applicationHooks"},
 				dryRun=false,
 				monochrome=true,
 						plugin={"pretty", "json: target/myReports/report.json",
                         		"rerun: target/failedCases.txt"}
-	
 		)
 
 /*public class MyTestRunner extends AbstractTestNGCucumberTests {

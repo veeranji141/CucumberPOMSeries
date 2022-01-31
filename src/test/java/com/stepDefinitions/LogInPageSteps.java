@@ -46,11 +46,13 @@ public class LogInPageSteps {
 
 	@Given("user enters password {string}")
 	public void user_enters_password(String password) {
+		System.out.println("Entering the password");
 	    logInPage.enterPassword(password);
 	}
 
 	@Given("user clicks on Login button")
 	public void user_clicks_on_login_button() {
+		System.out.println("login to the account");
 	   logInPage.clickOnLogInButton();
 	}
 

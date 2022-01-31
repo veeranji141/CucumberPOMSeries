@@ -1,9 +1,9 @@
 Feature: Account Page Feature
 
 Background: 
-Given user has already logged in to application
+Given user has already logged into application
 |username|password|
-|veeranji141@gmail.com|Veeru_141|
+|veeranji141@gmail.com|Veeru@141|
 
 Scenario: Accounts page title
 Given user is on My Account Page

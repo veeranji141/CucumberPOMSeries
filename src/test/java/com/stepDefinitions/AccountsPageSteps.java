@@ -14,22 +14,24 @@ import io.cucumber.java.en.When;
 import junit.framework.Assert;
 
 public class AccountsPageSteps {
-
 	private AccountsPage accountsPage;
 	private LogInPageElements logInPage = new LogInPageElements(DriverFactory.getDriver());
 	
-	@Given("user has already logged in to application")
-	public void user_has_already_logged_in_to_application(DataTable credTable) {
-		
-	   List<Map<String,String>> credList = credTable.asMaps();
-	    String usrName= credList.get(0).get("username");
-	    String passwrd =credList.get(0).get("password");
-	    DriverFactory.getDriver().get("https://yourlogo.geiger.com/login");
-	    accountsPage =logInPage.doLogin(usrName, passwrd);
-	}
+	
+	  @Given("user has already logged into application") public void
+	  user_has_already_logged_in_to_application(DataTable credTable) {
+	  
+	  List<Map<String,String>> credList = credTable.asMaps();
+	  String usrName=credList.get(0).get("username");
+	  String passwrd=credList.get(0).get("password");
+	  DriverFactory.getDriver().get("https://yourlogo.geiger.com/login");
+	  accountsPage =logInPage.doLogin(usrName, passwrd); 
+	  }
+	 
 
 	@Given("user is on My Account Page")
 	public void user_is_on_my_account_page() {
+		//logInPage.clickOnLogInButton();
 		String title = accountsPage.getAccountsPageTitile();
 		System.out.println("Accounts page title is: "+title);
 	    

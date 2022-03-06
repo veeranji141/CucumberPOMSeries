@@ -38,7 +38,6 @@ public class OrderABagItemPage {
 		driver.findElement(backPackOption).click();
 		
 	}
-	
 	public void sortingListByColor() {
 		
 		

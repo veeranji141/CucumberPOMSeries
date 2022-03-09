@@ -50,10 +50,10 @@ public class OrderABagItemPage {
 	}
 	
 	public void selectTheOrder(String itemName) {
-		/*
-		 * int size = driver.findElements(By.tagName("iframe")).size();
-		 * System.out.println("Number of elements are present:"+size);
-		 */
+		
+		  int size = driver.findElements(By.tagName("iframe")).size();
+		  System.out.println("Number of elements are present:"+size);
+		 
 		
 		  List<WebElement> items = driver.findElements(itemsList); 
 		  System.out.println(itemName);
